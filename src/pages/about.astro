@@ -1,4 +1,7 @@
 ---
+  import '../styles/global.css'
+  import Navigation from '../components/Navigation.astro';
+  import Footer from '../components/Footer.astro';
   const pageTitle = "Daffulip The Little";
   const fontWeight = "bold";
   const skillColor = "green";
@@ -38,9 +41,7 @@ const skills = ["HTML", "CSS", "Relational Databases", "React would be nice", "P
 	</head>
 	<body>
 
-  <a href="/">Home</a>
-  <a href="/about/">About</a>
-  <a href="/blog/">Blog</a>
+  <Navigation/>
 
 <h1>{pageTitle}</h1>
   <h2>... and my new Astro site!</h2>
@@ -61,6 +62,6 @@ const skills = ["HTML", "CSS", "Relational Databases", "React would be nice", "P
 <ul>
   {skills.map((skill) => <li class="skill">{skill}</li>)}
 </ul>
-
-	</body>
+<Footer/>
+</body>
 </html>
